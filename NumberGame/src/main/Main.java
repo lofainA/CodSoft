@@ -11,24 +11,25 @@ public class Main {
 		
 		Random randomNum =  new Random();	
 		BufferedReader br  = new BufferedReader(new InputStreamReader(System.in));
-
-		
 		
 		String guessedNum;
 		
 		
-		int setPoints = 50;
+		
 		int points = 0;
 		
 		String prompt =  new String();
 		
 		
 		do { 
-			int lives = 5;
-			int roundPoints = 50;
+			int lives = 5; //adjust lives per round
+			int roundPoints = lives * 10; 
+			int setPoints = lives * 10; //for line: 43
 			int generatedNum = randomNum.nextInt(100) + 1;
-			System.out.println("(For testing purposes generated number = " 
-											+ generatedNum +")");
+			
+			//Remove this line after testing
+			System.out.println("[For testing purposes generated number = " 
+											+ generatedNum +"]");
 			
 			
 			do { 

@@ -11,6 +11,7 @@ public class Main {
 		//initialize variables
 		int total = 0;
 		int average = 0;
+		int limit = 100;
 		String grade;
 		Scanner sc = new Scanner(System.in);
 		
@@ -38,10 +39,17 @@ public class Main {
 			System.out.print("Enter marks in " + sub + ": ");
 			
 			int mark = sc.nextInt();
+			
+			while (mark > 100) {
+				System.out.println("Mark must be within " + limit + "!");
+				System.out.print("Enter marks in " + sub + ": ");
+				mark = sc.nextInt();
+				
+			}
 			marks.add(mark);
 		}
 		
-		
+		sc.close();
 		
 		//calculate total
 		for(Integer mark: marks) {
